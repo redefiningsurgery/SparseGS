@@ -446,6 +446,8 @@ if __name__ == "__main__":
     parser.add_argument("--prune_sched", nargs="+", type=int, default=[])
     args = parser.parse_args(sys.argv[1:])
     args.save_iterations.append(args.iterations)
+    args.depths = '' 
+    args.train_test_exp = False
 
     dataset = lp.extract(args)
     
